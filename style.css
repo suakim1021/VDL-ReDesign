@@ -30,8 +30,8 @@ li {list-style: none;}
 .nav .inner {padding: 38px 111px; box-sizing: border-box;}
 .nav .inner a {color: #fff; font-family: noto sans kr; font-size: 18px; font-weight: 100;}
 .nav .inner ul li {float: left; margin-right: 125px;}
-.nav .inner ul li:first-child {margin-right: 500px;}
-.nav .inner ul li:nth-child(5) {margin-right: 530px;}
+.nav .inner ul li:first-child {margin-right: 400px;}
+.nav .inner ul li:nth-child(5) {margin-right: 400px;}
 .nav .inner ul li:last-child {margin-right: 0;}
 .nav .inner ul li:last-child .imgwrap img {margin-right: 20px;}
 
