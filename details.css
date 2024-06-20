@@ -1,0 +1,224 @@
+/* ■■■■■■ 기본 설정 ■■■■■■ */
+:root {
+    --vdl-black: #1e1e1e;
+
+    --shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* ■■■■■■ 폰트 설정 ■■■■■■ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'VDLlight';
+    src: url(fonts/HeirofLightRegular.ttf);}
+@font-face {
+    font-family: 'VDLbold';
+    src: url(fonts/HeirofLightBold.ttf);}
+
+ /* 내비게이션 */
+.nav {transition: .3s; width: 100%; height: 176px; position: fixed; z-index: 99;}
+.nav .inner ul li {float: left; margin-right: 125px;}
+.nav .inner ul li:first-child {margin-right: 500px;}
+.nav .inner ul li:nth-child(5) {margin-right: 530px;}
+.nav .inner ul li:last-child {margin-right: 0;}
+.nav .inner ul li:last-child .imgwrap img {margin-right: 20px;}
+.nav .inner {padding: 38px 111px; height: 100px; box-sizing: border-box;}
+.nav .inner a {color: #fff; font-family: noto sans kr; font-size: 18px; font-weight: 100;}
+.nav .inner {background-color: var(--vdl-black);}
+.nav .inner2 {height: 50px; background-color: #fff; border-bottom: 1px solid var(--vdl-black); padding: 38px 111px; box-sizing: border-box;}
+.nav .inner2 ul {margin-top: -10px;}
+.nav .inner2 ul li {float: left; margin-right: 10px;}
+.nav .inner2 ul li::after {content: ">" ; margin-left: 10px;}
+.nav .inner2 ul li:last-child::after {content: "";}
+.nav .inner2 ul li a {color: var(--vdl-black); text-decoration: none; font-family: Noto Sans Kr;}
+
+.details {width: 100%;}
+.details .inner {width: 1300px; margin: 0 auto; margin-top: 0px; padding-top: 250px;}
+.details .inner .swiper {width: 550px; height: 580px; float: left;}
+.details .inner .swiper-pagination {
+    margin-left: -50px;
+}
+.details .inner .swiper-pagination-bullet {
+    transition: .3s;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid var(--vdl-black);
+    opacity: 1;
+    margin: 20px !important;
+}
+.details .inner .swiper-pagination-bullet-active {
+    background-color: var(--vdl-black);
+    scale: 1.7;
+}
+
+.details .inner .right_box {float: left; width: 725px;}
+
+/*상세페이지 타이틀*/
+.details .inner .right_box .title {width: 100%; height: 120px;}
+.details .inner .right_box .title h1 {font-family: Noto Sans Kr; font-size: 36px; color: var(--vdl-black);}
+.details .inner .right_box .title p {font-family: Noto Sans Kr; font-size: 16px; font-weight: 300; color: #616161;}
+
+.details .inner .right_box hr {
+    background-color: #c0c0c0;
+    height: 1px;
+    border: 0;
+}
+
+/*상세페이지 옵션/설명란*/
+.details .inner .right_box .desc {width: 100%; height: 325px; box-sizing: border-box; padding-top: 70px;}
+.details .inner .right_box .desc ul li {
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-right: 8px;
+}
+/*색상 종류*/
+.details .inner .right_box .desc ul .ivory {background-color: #edecea;}
+.details .inner .right_box .desc ul .blue {background-color: #d7ddeb; border: 1px solid var(--vdl-black);}
+.details .inner .right_box .desc ul .pink {background-color: #f4d4c7;}
+.details .inner .right_box .desc ul .green {background-color: #c9d9bf;}
+.details .inner .right_box .desc .float {float: left; margin-right: 57px;}
+.details .inner .right_box .desc .space {clear: both;}
+.details .inner .right_box .desc p {
+    font-family: Noto Sans Kr;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--vdl-black);
+    margin-bottom: 50px;
+}
+.details .inner .right_box .desc p span {margin-left: 57px;}
+
+/*옵션 선택 드롭다운 메뉴*/
+.details .inner .right_box .selection {
+    background-image: url(images/icon_downarrow.png);
+    background-repeat: no-repeat;
+    background-position: 690px 33px;
+    margin-bottom: 30px;
+}
+.details .inner .right_box .selection #color {
+    cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-family: Noto Sans Kr;
+    color: #424242;
+    font-size: 21px;
+    font-weight: 500;
+    width: 100%;
+    height: 70px;
+}
+.details .inner .right_box .selection #color option {
+    background-image: url(images/brand1.png);
+}
+
+/*구매/좋아요 버튼*/
+.details .inner .right_box .buttons button {
+    width: 350px;
+    height: 78px;
+    color: #fff;
+    font-family: Noto Sans Kr;
+    font-size: 21px;
+    background-color: var(--vdl-black);
+    cursor: pointer;
+    margin-bottom: 80px;
+}
+.details .inner .right_box .buttons button span {margin-left: 20px;}
+.details .inner .right_box .buttons .purchase {
+    background-image: url(images/icon_naver.png);
+    background-repeat: no-repeat;
+    background-position: 80px 25px;
+}
+.details .inner .right_box .buttons .like {
+    float: right;
+    background-image: url(images/icon_heart.png);
+    background-repeat: no-repeat;
+    background-position: 85px 30px;
+}
+
+
+.detail-page {
+    clear: both;
+    width: 1300px;
+    margin: 0 auto;
+}
+.detail-page .inner hr {
+    width: 100%;
+    background-color: #c0c0c0;
+    height: 1px;
+    border: 0;
+}
+.detail-page .inner .btnwrapper {display: flex; justify-content: center; margin-top: 130px;}
+.detail-page .inner .btnwrapper li {float: left; margin-right: 65px;}
+.detail-page .inner .btnwrapper li:last-child {margin-right: 0;}
+.detail-page .inner .btnwrapper button {
+    cursor: pointer;
+    transition: .3s;
+    width: 140px;
+    height: 53px;
+    border: 1px solid var(--vdl-black);
+    border-radius: 50px;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+.detail-page .inner .btnwrapper button:hover {color: #fff; background-color: var(--vdl-black);}
+.detail-page .inner .btnwrapper li:nth-child(1) button {color: #fff; background-color: var(--vdl-black);}
+
+/* 상세페이지 이미지 위치하는 곳 */
+.detail-page .inner {position: relative;}
+.detail-page .inner .detailimg {
+    transition: .3s;
+    overflow: hidden;
+    width: 860px;
+    height: 2000px;
+    margin: 0 auto;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    margin-bottom: 150px;
+}
+.detail-page .inner .morebutton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+}
+.detail-page .inner .morebutton button {
+    transition: .3s;
+    cursor: pointer;
+    background-image: url(images/icon_plus.png);
+    background-repeat: no-repeat;
+    background-position: 28px 30px;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--vdl-black);
+    border-radius: 50px;
+}
+.detail-page .inner .morebutton button:hover {
+    background-color: var(--vdl-black);
+}
+
+/*함께 사용하면 좋은 제품*/
+.recommand hr {
+    background-color: #c0c0c0;
+    height: 1px;
+    border: 0;}
+.recommand .inner {text-align: center; margin-top: 50px; margin-bottom: 230px;}
+.recommand .inner .title {margin-top: 100px; margin-bottom: 50px;}
+.recommand .inner .title h2 {
+    font-family: Noto Sans Kr;
+    font-size: 36px;
+    color: var(--vdl-black);
+}
+.recommand .inner .title p {
+    font-family: Noto Sans Kr;
+    font-size: 16px;
+    color: #979797;
+    font-weight: 300;
+}
+.recommand .inner ul {display: flex; justify-content: center;}
+.recommand .inner ul li {float: left; width: 300px;}
+.recommand .inner .imgwrap {height: 320px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;}
+.recommand .inner img {transition: .2s;}
+.recommand .inner ul li:hover img {scale: 1.1;}
+.recommand .inner ul li p {font-family: "Noto Sans Kr"; font-size: 16px; font-weight: 300; margin-bottom: 10px;}
+.recommand .inner ul li h3 {font-family: "Noto Sans Kr"; font-size: 24px; font-weight: 600;}

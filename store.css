@@ -1,0 +1,74 @@
+/* ■■■■■■ 기본 설정 ■■■■■■ */
+:root {
+    --vdl-black: #1e1e1e;
+
+    --shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* ■■■■■■ 폰트 설정 ■■■■■■ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'VDLlight';
+    src: url(fonts/HeirofLightRegular.ttf);}
+@font-face {
+    font-family: 'VDLbold';
+    src: url(fonts/HeirofLightBold.ttf);}
+
+/* 내비게이션 */
+.nav {transition: .3s; width: 100%; height: 176px; position: fixed; z-index: 99; border-bottom: none;}
+.nav .inner {background-color: var(--vdl-black);}
+.nav .inner ul li {float: left; margin-right: 125px;}
+.nav .inner ul li:first-child {margin-right: 500px;}
+.nav .inner ul li:nth-child(5) {margin-right: 530px;}
+.nav .inner ul li:last-child {margin-right: 0;}
+.nav .inner ul li:last-child .imgwrap img {margin-right: 20px;}
+.nav .inner {padding: 38px 111px; height: 100px; box-sizing: border-box;}
+.nav .inner a {color: #fff; font-family: noto sans kr; font-size: 18px; font-weight: 100;}
+
+
+.onlinestore {
+    width: 100%;
+    height: 1350px;
+    padding-top: 300px;
+    box-sizing: border-box;
+}
+.onlinestore .inner {text-align: center;}
+.onlinestore .inner h1 {
+    font-family: VDLlight;
+    font-size: 72px;
+    font-weight: 100;
+    color: var(--vdl-black);
+    margin-bottom: 70px;
+}
+.onlinestore .inner h2 {
+    font-family: Noto Sans Kr;
+    font-size: 24px;
+    color: var(--vdl-black)
+}
+.onlinestore .inner p {
+    font-family: Noto Sans Kr;
+    font-size: 16px;
+    color: #616161;
+}
+.onlinestore .inner hr {
+    background-color: #c0c0c0;
+    height: 1px;
+    border: 0;
+    margin-top: 66px;
+    margin-bottom: 80px;
+}
+.onlinestore .inner .logo {width: 1360px; margin: 0 auto;}
+.onlinestore .inner .logo li {
+    width: 270px;
+    height: 170px;
+    float: left;
+}
+.onlinestore .inner .logo li img {transition: .3s;}
+.onlinestore .inner .logo li:hover img {transform: translateY(-5px);}
+.onlinestore .inner .logo .clear {clear: both;}
+.onlinestore .inner .logo li:nth-child(1) img {margin-top: 7px;}
+.onlinestore .inner .logo li:nth-child(2) img {margin-top: 5px;}
+.onlinestore .inner .logo li:nth-child(4) img {margin-top: 10px;}
+.onlinestore .inner .logo li:nth-child(7) img {margin-top: -50px;}
+.onlinestore .inner .logo li:nth-child(15) img {margin-top: -10px;}
+

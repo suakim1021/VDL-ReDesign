@@ -1,0 +1,300 @@
+/* ■■■■■■ 기본 설정 ■■■■■■ */
+:root {
+    --vdl-black: #1e1e1e;
+
+    --shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* ■■■■■■ 폰트 설정 ■■■■■■ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'VDLlight';
+    src: url(fonts/HeirofLightRegular.ttf);}
+@font-face {
+    font-family: 'VDLbold';
+    src: url(fonts/HeirofLightBold.ttf);}
+
+
+* {margin: 0; padding: 0;}
+html {scroll-behavior: smooth;}
+a {text-decoration: none;}
+li {list-style: none;}
+
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-thumb {background: #1e1e1e; border-radius: 12px;}
+::-webkit-scrollbar-thumb:hover {background-color: gray;}
+::-webkit-scrollbar-track {background-color: #ededed;}
+
+/* 내비게이션 */
+.nav {transition: .3s; width: 100%; height: 100px; background-color: transparent; border-bottom: 1px solid #fff; position: fixed; z-index: 99;}
+.nav .inner {padding: 38px 111px; box-sizing: border-box;}
+.nav .inner a {color: #fff; font-family: noto sans kr; font-size: 18px; font-weight: 100;}
+.nav .inner ul li {float: left; margin-right: 125px;}
+.nav .inner ul li:first-child {margin-right: 500px;}
+.nav .inner ul li:nth-child(5) {margin-right: 530px;}
+.nav .inner ul li:last-child {margin-right: 0;}
+.nav .inner ul li:last-child .imgwrap img {margin-right: 20px;}
+
+/* 비디오 섹션 */
+.video {width: 100%; height: 100vh;}
+.video .inner {position: relative;}
+.video .inner .video_wrap {position: absolute; width: 100%; height: 100vh; overflow: hidden;}
+.video .inner .video_wrap video {width: 100%;}
+.video .inner .text_wrap {position: absolute; top: 340px; left: 111px;}
+.video .inner .text_wrap h2 {
+    color: #fff;
+    font-family: VDLlight;
+    font-size: 142px;
+    font-weight: 100;
+    font-stretch: extra-expanded;
+    line-height: 172px;
+}
+.video .inner .text_wrap p {color: #fff; font-size: 20px; margin-top: 20px; font-family: "Noto Sans Kr"; font-weight: 200;}
+
+/* 백투탑 플로팅 버튼 */
+.arrow-up {
+    cursor: pointer;
+    position: fixed;
+    bottom: 90px;
+    right: 155px;
+    width: 80px;
+    height: 80px;
+    color: white;
+    background-color: #fff;
+    background-image: url(images/icon-uparrow.png);
+    border: 1px solid #4b4b4b;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    z-index: 99;
+}
+
+.arrow-up:hover {
+    transform: scale(0.98);
+    background-color: var(--vdl-black);
+    background-image: url(images/icon-uparrow2.png);
+    border: 1px solid var(--vdl-black);
+}
+
+.arrow-up.show {
+    opacity: 1;
+}
+
+/* 탑셀러 스와이퍼 배너 */
+.topseller {width: 1500px; height: 700px; margin: 0 auto; margin-top: 125px;}
+.topseller .inner {position: relative;}
+
+.topseller .inner .swiper-slide .left_box {float: left;}
+.topseller .inner .swiper-slide .left_box h4 {font-family: Noto Sans kr; font-size: 18px; margin-bottom: 130px;}
+.topseller .inner .swiper-slide .left_box h2 {font-family: VDLlight; font-size: 50px; font-weight: 100; line-height: 60px;}
+.topseller .inner .swiper-slide .left_box p {font-family: Noto Sans kr; font-size: 20px; font-weight: 100; margin-top: 15px;}
+
+.topseller .inner .swiper-slide .left_box button {transition: .3s; width: 170px; height: 55px; border: 1px solid var(--vdl-black); border-radius: 50px; background-color: transparent; margin-top: 40px;}
+.topseller .inner .swiper-slide .left_box button:hover {cursor: pointer; background-color: var(--vdl-black); color: #fff;}
+
+.topseller .inner .swiper-slide .right_box {float: right;}
+.topseller .inner .swiper-slide .right_box .imgwrapper {float: right; width: 600px; height: 650px; overflow: hidden;}
+.topseller .inner .swiper-slide .right_box .imgwrapper img {width: 600px;}
+
+.topseller .inner .swiper-pagination {margin-left: -560px; margin-bottom: -10px;}
+.topseller .inner .swiper-pagination-bullet {
+    transition: .3s;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid var(--vdl-black);
+    opacity: 1;
+    margin: 37px !important;
+}
+.topseller .inner .swiper-pagination-bullet-active {
+    background-color: var(--vdl-black);
+    scale: 1.7;
+}
+
+
+/* 인기상품 캐러샐 */
+.md {width: 1500px; height: 750px; margin: 0 auto; margin-top: 150px;}
+.md .inner {position: relative;}
+.md .inner .btnwrapper {display: flex; justify-content: center;}
+.md .inner .btnwrapper li {float: left; margin-right: 50px;}
+.md .inner .btnwrapper li button {cursor: pointer; transition: .3s; width: 140px; height: 53px; border: 1px solid var(--vdl-black); border-radius: 50px; background-color: transparent; margin-bottom: 50px;}
+.md .inner .btnwrapper li button:hover {color: #fff; background-color: var(--vdl-black);}
+.md .inner .btnwrapper li:nth-child(2) button {color: #fff; background-color: var(--vdl-black);}
+
+
+.md .inner .swiper {clear: both;}
+.md .inner .swiper-wrapper {width: 100%;}
+.md .inner .swiper-wrapper .swiper-slide {text-align: center;}
+
+.md .inner .swiper-wrapper .swiper-slide .imgwrap {height: 320px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;}
+.md .inner .swiper-wrapper .swiper-slide img {transition: .2s;}
+.md .inner .swiper-wrapper .swiper-slide:hover img {scale: 1.1;}
+.md .inner .swiper-wrapper .swiper-slide p {font-family: "Noto Sans Kr"; font-size: 16px; font-weight: 300; margin-bottom: 10px;}
+.md .inner .swiper-wrapper .swiper-slide h3 {font-family: "Noto Sans Kr"; font-size: 24px; font-weight: 600;}
+
+.md .inner .swiper-pagination { margin-bottom: 330px;}
+.md .inner .swiper-pagination-bullet {
+    transition: .3s;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    cursor: none;
+    opacity: 1;
+    margin: 37px !important;
+}
+
+
+/* 브랜드 소개 */
+.brand {clear: both; width: 100%; height: 3712px; color: #fff; overflow: hidden;}
+.brand h2 {font-family: VDLlight; font-size: 270px; font-weight: lighter;}
+.brand p {font-weight: lighter; font-family: "Noto Sans Kr";}
+
+.brand .inner {position: relative; width: 100%; height: 3712px; background-color: var(--vdl-black);}
+
+.brand .inner .img1 {position: absolute; top: 1040px;}
+.brand .inner .img2 {position: absolute; right: 0; top: 2630px;}
+
+.brand .inner .about_vdl {width: 100%; height: 790px; position: absolute; top: 380px; background-image: url(images/brand1.png); background-repeat: none;}
+.brand .inner .about_vdl .innerwrap {width: 1708px; height: 800px; margin: 0 auto; position: relative;}
+.brand .inner .about_vdl .innerwrap .txt1 {position: absolute; top: -380px; padding-top: 175px;}
+.brand .inner .about_vdl .innerwrap .txt2 {position: absolute; top: 500px;}
+.brand .inner .about_vdl .innerwrap .txt2 h3 {font-family: "Noto Sans Kr"; font-size: 48px;}
+.brand .inner .about_vdl .innerwrap .txt3 {position: absolute; top: 600px;}
+.brand .inner .about_vdl .innerwrap .txt3 p {font-family: "Noto Sans Kr"; font-size: 23px;}
+
+.brand .inner .vdl_mission {width: 1708px; height: 700px; margin: 0 auto; padding-top: 1300px;}
+.brand .inner .vdl_mission .left_box {float: left;}
+.brand .inner .vdl_mission .left_box h2 {font-family: VDLlight; font-size: 110px; line-height: 120px; margin-top: 50px;}
+.brand .inner .vdl_mission .left_box h3 {font-family: "Noto Sans Kr"; font-size: 48px; font-weight: 400; margin-top: 10px;}
+.brand .inner .vdl_mission .left_box p {font-family: "Noto Sans Kr"; font-size: 24px; margin-top: 200px; line-height: 40px;}
+.brand .inner .vdl_mission .right_box {float: right;}
+
+.brand .inner .just_wear {width: 1708px; height: 700px; margin: 0 auto; padding-top: 400px;}
+.brand .inner .just_wear .left_box {float: left;}
+.brand .inner .just_wear .right_box {float: left; margin-left: 230px;}
+.brand .inner .just_wear .right_box h2 {font-family: VDLlight; font-size: 110px; line-height: 120px; margin-top: 150px;}
+.brand .inner .just_wear .right_box h3 {font-family: "Noto Sans Kr"; font-size: 48px; font-weight: 400; margin-top: 10px;}
+.brand .inner .just_wear .right_box p {font-family: "Noto Sans Kr"; font-size: 24px; margin-top: 200px; line-height: 40px;}
+
+/* 온라인스토어 찾아보기 */
+.store {clear: both; width: 100%; height: 800px;}
+.store .inner {text-align: center; position: relative;}
+.store .inner .img1 {position: absolute; top: -20px; left: 326px;}
+.store .inner .img2 {position: absolute; top: 143px; left: 310px;}
+.store .inner .img3 {position: absolute; top: 74px; left: 1471px;}
+.store .inner h2 {margin-top: 350px; font-family: VDLlight; font-size: 72px; font-weight: 200; color: var(--vdl-black)}
+.store .inner p {margin-top: 10px; font-family: "Noto Sans Kr"; font-size: 20px; font-weight: 400; color: var(--vdl-black);}
+.store .inner button {margin-top: 60px; margin-bottom: 80px; cursor: pointer; transition: .3s; width: 140px; height: 53px; border: 1px solid var(--vdl-black); border-radius: 50px; background-color: transparent;}
+.store .inner button:hover {cursor: pointer; background-color: var(--vdl-black); color: #fff;}
+
+.tag-scrollers {
+	width: 100%;
+    height: 200px;
+    border-top: 1px solid var(--vdl-black);
+    border-bottom: 1px solid var(--vdl-black);
+	overflow: hidden;
+}
+.tag-scroller {
+	display: grid;
+	gap: 1.5rem;
+	mask: linear-gradient(90deg, #0000, var(--background) 15%, var(--background) 85%, #0000);
+}
+.tag-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    padding-top: 25px;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+	gap: 8.5rem;
+}
+@media (prefers-reduced-motion) {
+	.tag-list {
+		flex-flow: row nowrap;
+		overflow: auto;
+		scrollbar-width: none;
+		scrollbar-color: transparent transparent;
+	}
+	.tag-list::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	.tag-list::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
+	.tag-list::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+}
+.tag-list li {
+	padding: 0.625rem 1.375rem;
+	white-space: nowrap;
+}
+.tag-scroller.scrolling .tag-list {
+	width: max-content;
+	flex-wrap: nowrap;
+	animation: horizontal-scroll var(--duration) var(--direction, normal) linear infinite;
+}
+.tag-scroller.scrolling .tag-list:nth-child(even) {
+	--direction: reverse;
+}
+.tag-scroller:hover .tag-list {
+	animation-play-state: paused;
+}
+@keyframes horizontal-scroll {
+	to {
+		/*	0.75rem FOR HALF THE GAP
+			OF THE .tag-scroller
+		*/
+		transform: translateX(calc(-50% - 4.25rem));
+	}
+}
+
+.footer {clear: both; width: 100%; height: 466px; background-color: #1e1e1e;}
+.footer .inner {width: 100%; box-sizing: border-box; padding: 62px;}
+.footer .inner .left_box {float: left;}
+.footer .inner .right_box {float: right;}
+.footer .inner .bottom_box {clear: both;}
+.footer .inner .left_box img {margin-bottom: 15px;}
+.footer h4 {font-family: "Noto Sans Kr"; font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 40px;}
+.footer address {font-style: normal; font-family: "Noto Sans Kr"; font-size: 14px; font-weight: 200; color: #7e7e7e; line-height: 28px;}
+.footer p {margin-top: 320px; font-weight: 200; text-align: center; font-family: "Noto Sans Kr"; font-size: 14px; color: #d4d4d4;}
+
+.footer .inner .right_box #lang {
+    width: 100px; height: 50px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer .inner .right_box #lang option {
+    color: var(--vdl-black);
+}
+
+.footer .inner .right_box #lang::selection {
+    border: none;
+}
+
+/* 스크롤매직 애니메이션 */
+.back-to-position {opacity: 0; transition: 1s;}
+.back-to-position.to-right {transform: translateX(-150px);}
+.back-to-position.to-left {transform: translateX(150px);}
+.back-to-position.to-up {transform: translateY(-150px);}
+.back-to-position.to-down {transform: translateY(150px);}
+.show .back-to-position {opacity: 1; transform: translateX(0);}
+.show .back-to-position.delay-0 {transition-delay: 0s;}
+.show .back-to-position.delay-1 {transition-delay:0.3s;}
+.show .back-to-position.delay-2 {transition-delay:0.6s;}
+.show .back-to-position.delay-3 {transition-delay:0.9s;}
+.show .back-to-position.delay-4 {transition-delay:1.2s;}
+.show .back-to-position.delay-5 {transition-delay:1.5s;}
+.show .back-to-position.delay-6 {transition-delay:1.8s;}
