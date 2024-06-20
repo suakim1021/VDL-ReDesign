@@ -186,7 +186,7 @@ li {list-style: none;}
 .store .inner {text-align: center; position: relative;}
 .store .inner .img1 {position: absolute; top: -20px; left: 326px;}
 .store .inner .img2 {position: absolute; top: 143px; left: 310px;}
-.store .inner .img3 {position: absolute; top: 74px; left: 1471px;}
+.store .inner .img3 {position: absolute; top: 74px; left: 1271px;}
 .store .inner h2 {margin-top: 350px; font-family: VDLlight; font-size: 72px; font-weight: 200; color: var(--vdl-black)}
 .store .inner p {margin-top: 10px; font-family: "Noto Sans Kr"; font-size: 20px; font-weight: 400; color: var(--vdl-black);}
 .store .inner button {margin-top: 60px; margin-bottom: 80px; cursor: pointer; transition: .3s; width: 140px; height: 53px; border: 1px solid var(--vdl-black); border-radius: 50px; background-color: transparent;}
